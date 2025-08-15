@@ -1,6 +1,6 @@
 # Sistema de Gestión de Base de Datos para Hospital Pediátrico
 
-*Proyecto académico de base de datos que abarca desde el diseño conceptual y lógico hasta la implementación y consulta de un sistema de información clínica. Desarrollado en colaboración con [Nombre de tu Compañero].*
+*Proyecto académico de base de datos que abarca desde el diseño conceptual y lógico hasta la implementación y consulta de un sistema de información clínica. Desarrollado en colaboración con https://github.com/DanielRestrepoGaleano.*
 
 ---
 
