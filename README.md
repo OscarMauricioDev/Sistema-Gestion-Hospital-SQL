@@ -47,12 +47,11 @@ JOIN pacientes p ON h.id_paciente = p.id_paciente
 JOIN habitaciones ha ON h.id_habitacion = ha.id_habitacion
 WHERE h.fecha_salida IS NULL;
 
-### 1. Consulta de Pacientes Hospitalizados Actualmente
-*Esencial para la gestión de camas en tiempo real. Utiliza `JOIN` para cruzar información y `WHERE` para filtrar por pacientes sin fecha de alta.*
-```sql
 
-2. Conteo de Citas por Médico con Filtro Agregado
-Consulta de análisis que utiliza GROUP BY y HAVING para identificar a los médicos con mayor carga de trabajo en un período determinado.
+
+
+
+
 
 
 
