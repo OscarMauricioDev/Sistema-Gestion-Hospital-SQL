@@ -17,13 +17,13 @@ El diseño se realizó siguiendo un enfoque estructurado, comenzando con una vis
 ### Modelo Conceptual
 Define las entidades principales y sus relaciones (1:N, N:M), mostrando la lógica de negocio del sistema.
 
-![Modelo Conceptual](2_Diseno_Base_de_Datos/mo<img width="1853" height="1923" alt="modelo_conceptual png" src="https://github.com/user-attachments/assets/228224ec-0e18-49c3-a6f1-ba940c53d0bb" />
-delo_conceptual.png)
+<img width="1853" height="1923" alt="modelo_conceptual png" src="https://github.com/user-attachments/assets/228224ec-0e18-49c3-a6f1-ba940c53d0bb" />
+
 
 ### Diagrama Entidad-Relación (Modelo Lógico/Físico)
 El plano detallado de la base de datos implementada, mostrando tablas, columnas, tipos de datos, claves primarias (PK) y foráneas (FK).
 
-![Diagrama Entidad-Relación]<img width="2511" height="1473" alt="diagrama_entidad_relacion png" src="https://github.com/user-attachments/assets/ef4a8d09-bbed-41da-aa8a-b15f017c05c3" />
+<img width="2511" height="1473" alt="diagrama_entidad_relacion png" src="https://github.com/user-attachments/assets/ef4a8d09-bbed-41da-aa8a-b15f017c05c3" />
 
 ## 💻 Tecnologías y Herramientas
 
