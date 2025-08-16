@@ -23,8 +23,7 @@ delo_conceptual.png)
 ### Diagrama Entidad-Relación (Modelo Lógico/Físico)
 El plano detallado de la base de datos implementada, mostrando tablas, columnas, tipos de datos, claves primarias (PK) y foráneas (FK).
 
-![Diagrama Entidad-Relación](2_Diseno_Base_de_Datos/diagrama_enti<img width="2511" height="1473" alt="diagrama_entidad_relacion png" src="https://github.com/user-attachments/assets/ef4a8d09-bbed-41da-aa8a-b15f017c05c3" />
-dad_relacion.png)
+![Diagrama Entidad-Relación]<img width="2511" height="1473" alt="diagrama_entidad_relacion png" src="https://github.com/user-attachments/assets/ef4a8d09-bbed-41da-aa8a-b15f017c05c3" />
 
 ## 💻 Tecnologías y Herramientas
 
