@@ -17,12 +17,14 @@ El diseño se realizó siguiendo un enfoque estructurado, comenzando con una vis
 ### Modelo Conceptual
 Define las entidades principales y sus relaciones (1:N, N:M), mostrando la lógica de negocio del sistema.
 
-![Modelo Conceptual](2_Diseno_Base_de_Datos/modelo_conceptual.png)
+![Modelo Conceptual](2_Diseno_Base_de_Datos/mo<img width="1853" height="1923" alt="modelo_conceptual png" src="https://github.com/user-attachments/assets/228224ec-0e18-49c3-a6f1-ba940c53d0bb" />
+delo_conceptual.png)
 
 ### Diagrama Entidad-Relación (Modelo Lógico/Físico)
 El plano detallado de la base de datos implementada, mostrando tablas, columnas, tipos de datos, claves primarias (PK) y foráneas (FK).
 
-![Diagrama Entidad-Relación](2_Diseno_Base_de_Datos/diagrama_entidad_relacion.png)
+![Diagrama Entidad-Relación](2_Diseno_Base_de_Datos/diagrama_enti<img width="2511" height="1473" alt="diagrama_entidad_relacion png" src="https://github.com/user-attachments/assets/ef4a8d09-bbed-41da-aa8a-b15f017c05c3" />
+dad_relacion.png)
 
 ## 💻 Tecnologías y Herramientas
 
@@ -48,7 +50,7 @@ JOIN habitaciones ha ON h.id_habitacion = ha.id_habitacion
 WHERE h.fecha_salida IS NULL; 
 ```
 ### 2. Conteo de Citas por Médico con Filtro Agregado
-*Consulta de análisis que utiliza `GROUP BY`  y  `HAVING` para identificar a los médicos con mayor carga de trabajo en un período determinado.*
+*Consulta de análisis que utiliza `GROUP BY`  y  `HAVING`  para identificar a los médicos con mayor carga de trabajo en un período determinado.*
 ```sql
 SELECT
     m.nombre AS Nombre_Medico,
@@ -58,4 +60,18 @@ JOIN medicos m ON c.id_medico = m.id_medico
 WHERE YEAR(c.fecha) = 2024
 GROUP BY m.nombre
 HAVING COUNT(c.id_cita) > 2;
+```
+### 3. Implementación de Procedimientos Almacenados (CRUD)
+*Se crearon procedimientos para encapsular la lógica de negocio, como la eliminación segura de un acudiente, manejando las restricciones de clave foránea.*
+```sql
+CREATE PROCEDURE eliminar_acudiente(IN id_eliminar INT)
+BEGIN
+  -- Primero se eliminan los registros dependientes en la tabla intermedia
+  DELETE FROM pacientes_acudientes WHERE id_acudiente = id_eliminar;
+  -- Luego, se elimina el registro principal
+  DELETE FROM acudientes WHERE id_acudiente = id_eliminar;
+END;
+
+
+
  
