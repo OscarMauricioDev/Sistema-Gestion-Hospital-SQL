@@ -45,14 +45,17 @@ SELECT
 FROM hospitalizaciones h
 JOIN pacientes p ON h.id_paciente = p.id_paciente
 JOIN habitaciones ha ON h.id_habitacion = ha.id_habitacion
-WHERE h.fecha_salida IS NULL;
-
-
-
-
-
-
-
-
-
-
+WHERE h.fecha_salida IS NULL; 
+```
+### 2. Conteo de Citas por Médico con Filtro Agregado
+*Consulta de análisis que utiliza `GROUP BY`  y  `HAVING` para identificar a los médicos con mayor carga de trabajo en un período determinado.*
+```sql
+SELECT
+    m.nombre AS Nombre_Medico,
+    COUNT(c.id_cita) AS Total_Citas_2024
+FROM citas c
+JOIN medicos m ON c.id_medico = m.id_medico
+WHERE YEAR(c.fecha) = 2024
+GROUP BY m.nombre
+HAVING COUNT(c.id_cita) > 2;
+ 
