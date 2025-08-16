@@ -70,7 +70,3 @@ BEGIN
   -- Luego, se elimina el registro principal
   DELETE FROM acudientes WHERE id_acudiente = id_eliminar;
 END;
-
-
-
- 
